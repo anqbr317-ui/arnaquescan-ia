@@ -6,43 +6,80 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f4f7fb;
+      margin: 0;
       text-align: center;
+      color: white;
+      background: linear-gradient(135deg, #0f172a, #1e40af, #9333ea);
+      min-height: 100vh;
       padding: 40px;
     }
+
     .box {
-      background: white;
+      background: rgba(255,255,255,0.12);
       padding: 30px;
-      border-radius: 15px;
-      max-width: 600px;
+      border-radius: 18px;
+      max-width: 650px;
       margin: auto;
-      box-shadow: 0 0 15px #ccc;
+      box-shadow: 0 0 25px rgba(0,0,0,0.4);
     }
-    h1 { color: #1e40af; }
+
     input {
       padding: 12px;
       width: 80%;
-      margin: 15px;
+      margin: 10px;
+      border-radius: 8px;
+      border: none;
     }
+
     button {
-      background: #2563eb;
+      background: #22c55e;
       color: white;
       border: none;
       padding: 12px 25px;
       border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .premium {
+      background: white;
+      color: #111827;
+      margin-top: 25px;
+      padding: 25px;
+      border-radius: 15px;
+    }
+
+    .price {
+      font-size: 28px;
+      color: #2563eb;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
+
   <div class="box">
-    <h1>ArnaqueScan IA</h1>
-    <p>Analysez un site web pour détecter les risques potentiels.</p>
+    <h1>🛡️ ArnaqueScan IA</h1>
+    <p>Analysez les sites web suspects et détectez les risques potentiels.</p>
 
     <input type="text" placeholder="Entrez l'adresse du site">
     <br>
-    <button>Analyser</button>
+    <button>Analyser gratuitement</button>
 
-    <p><strong>Résultat :</strong> Analyse bientôt disponible.</p>
+    <p><strong>Résultat :</strong> Analyse simple disponible gratuitement.</p>
+
+    <div class="premium">
+      <h2>⭐ Offre Premium</h2>
+      <p>Accédez à une analyse complète avec score de fiabilité, détection de faux avis, vérification des mentions légales et rapport détaillé.</p>
+      <p class="price">4,99 € / mois</p>
+
+      <input type="text" placeholder="Votre nom">
+      <input type="email" placeholder="Votre email">
+      <input type="password" placeholder="Mot de passe">
+      <br>
+      <button>S'inscrire au Premium</button>
+    </div>
   </div>
+
 </body>
 </html>
