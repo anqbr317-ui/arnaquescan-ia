@@ -6,86 +6,47 @@
 <title>ArnaqueScan IA</title>
 
 <style>
-
 body{
 margin:0;
 font-family:Arial,sans-serif;
 color:white;
 text-align:center;
 background:
-radial-gradient(circle at top left,#1e40af 0%,transparent 35%),
-radial-gradient(circle at bottom right,#7c3aed 0%,transparent 35%),
+radial-gradient(circle at top left,#2563eb 0%,transparent 35%),
+radial-gradient(circle at bottom right,#9333ea 0%,transparent 35%),
 linear-gradient(135deg,#020617,#0f172a,#1e1b4b);
 min-height:100vh;
 }
 
-.decor{
-position:fixed;
-opacity:0.12;
-pointer-events:none;
-}
-
-.shield{
-top:40px;
-left:50px;
-font-size:90px;
-}
-
-.search{
-top:150px;
-right:80px;
-font-size:70px;
-}
-
-.globe{
-bottom:100px;
-left:80px;
-font-size:80px;
-}
-
-.alert{
-bottom:60px;
-right:60px;
-font-size:70px;
-}
-
 .container{
-max-width:1200px;
+max-width:1000px;
 margin:auto;
 padding:40px 20px;
 }
 
 .logo{
-font-size:55px;
+font-size:50px;
 font-weight:bold;
-margin-top:30px;
 }
 
 .logo span{
 color:#60a5fa;
 }
 
-.subtitle{
-font-size:22px;
-margin-bottom:40px;
-color:#dbeafe;
-}
-
 .card{
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(10px);
-border-radius:20px;
+background:rgba(255,255,255,0.10);
 padding:30px;
+border-radius:20px;
+margin-top:25px;
 box-shadow:0 0 25px rgba(0,0,0,0.3);
-margin-bottom:30px;
 }
 
 input{
 width:80%;
 padding:15px;
+margin:10px;
 border:none;
 border-radius:10px;
-margin:10px;
 font-size:16px;
 }
 
@@ -97,161 +58,120 @@ padding:15px 30px;
 border-radius:10px;
 font-size:18px;
 cursor:pointer;
+font-weight:bold;
 }
 
-button:hover{
-opacity:0.9;
+.result{
+margin-top:20px;
+padding:15px;
+border-radius:10px;
+background:rgba(0,0,0,0.25);
 }
 
 .features{
 display:flex;
-justify-content:center;
 flex-wrap:wrap;
-gap:20px;
+justify-content:center;
+gap:15px;
 margin-top:25px;
 }
 
 .feature{
-background:rgba(255,255,255,0.08);
+background:rgba(255,255,255,0.10);
 padding:15px;
 border-radius:12px;
-width:200px;
-}
-
-.premium{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:30px;
-margin-top:40px;
-}
-
-.premium-box{
-background:rgba(255,255,255,0.08);
-padding:25px;
-border-radius:20px;
-width:450px;
-}
-
-.price{
-font-size:45px;
-font-weight:bold;
-color:#fbbf24;
-}
-
-ul{
-text-align:left;
-line-height:2;
+width:190px;
 }
 
 .footer{
-margin-top:50px;
-padding:20px;
+margin-top:40px;
 color:#cbd5e1;
 }
-
 </style>
-
 </head>
 
 <body>
 
-<div class="decor shield">🛡️</div>
-<div class="decor search">🔍</div>
-<div class="decor globe">🌐</div>
-<div class="decor alert">⚠️</div>
-
 <div class="container">
 
-<h1 class="logo">Arnaque<span>Scan IA</span></h1>
+<h1 class="logo">🛡️ Arnaque<span>Scan IA</span></h1>
 
-<p class="subtitle">
-Analysez les sites web pour détecter les risques potentiels.
-</p>
+<p>Analysez les sites suspects et apprenez à éviter les arnaques en ligne.</p>
 
 <div class="card">
+<h2>🔍 Analyse rapide</h2>
 
-<h2>Analyse gratuite</h2>
-
-<input type="text" placeholder="Entrez l'adresse du site">
+<input id="url" type="text" placeholder="Entrez l'adresse du site">
 
 <br>
 
-<button>Analyser gratuitement</button>
+<button onclick="analyserSite()">Analyser</button>
 
-<p>
-Résultat : analyse gratuite disponible.
-</p>
+<div id="resultat" class="result">
+Résultat : entrez une adresse puis cliquez sur analyser.
+</div>
+</div>
 
 <div class="features">
-
-<div class="feature">
-⚡ Rapide
+<div class="feature">🛡️ Détection de risques</div>
+<div class="feature">⚡ Analyse rapide</div>
+<div class="feature">🤖 Aide par IA</div>
+<div class="feature">📊 Score simple</div>
 </div>
 
-<div class="feature">
-🔒 Sécurisé
-</div>
+<div class="card">
+<h2>📝 Inscription gratuite</h2>
 
-<div class="feature">
-🤖 Intelligence IA
-</div>
+<p>Créez votre compte pour suivre vos analyses.</p>
 
-<div class="feature">
-📊 Résultats fiables
-</div>
-
-</div>
-
-</div>
-
-<div class="premium">
-
-<div class="premium-box">
-
-<h2>⭐ Offre Premium</h2>
-
-<ul>
-<li>Score de confiance détaillé</li>
-<li>Détection des faux avis</li>
-<li>Vérification des mentions légales</li>
-<li>Analyse avancée par IA</li>
-<li>Rapport PDF téléchargeable</li>
-<li>Historique des analyses</li>
-<li>Support prioritaire</li>
-</ul>
-
-</div>
-
-<div class="premium-box">
-
-<h2>Inscription Premium</h2>
-
-<p class="price">4,99€ / mois</p>
-
-<input type="text" placeholder="Nom complet">
-
-<input type="email" placeholder="Adresse email">
-
+<input type="text" placeholder="Nom d'utilisateur">
+<input type="email" placeholder="Adresse e-mail">
 <input type="password" placeholder="Mot de passe">
 
-<br><br>
+<br>
 
-<button>S'inscrire au Premium</button>
+<button onclick="inscription()">Créer mon compte</button>
 
-<p>
-Paiement sécurisé • Résiliation à tout moment
-</p>
-
-</div>
-
+<p id="message"></p>
 </div>
 
 <div class="footer">
-© 2026 ArnaqueScan IA - Tous droits réservés
+© 2026 ArnaqueScan IA - Prévention et sensibilisation.
 </div>
 
 </div>
+
+<script>
+function analyserSite(){
+  let url = document.getElementById("url").value.toLowerCase();
+  let resultat = document.getElementById("resultat");
+
+  if(url === ""){
+    resultat.innerHTML = "⚠️ Veuillez entrer une adresse de site.";
+    return;
+  }
+
+  let score = 20;
+
+  if(url.includes("http://")) score += 20;
+  if(url.includes("promo") || url.includes("gratuit") || url.includes("urgent")) score += 20;
+  if(url.includes(".xyz") || url.includes(".top") || url.includes(".ru")) score += 20;
+  if(!url.includes("https://")) score += 20;
+
+  if(score >= 70){
+    resultat.innerHTML = "🚨 Risque élevé : ce site présente plusieurs signaux suspects.";
+  } else if(score >= 40){
+    resultat.innerHTML = "⚠️ Risque moyen : vérifiez les mentions légales et les avis.";
+  } else {
+    resultat.innerHTML = "✅ Risque faible : aucun gros signal suspect détecté.";
+  }
+}
+
+function inscription(){
+  document.getElementById("message").innerHTML =
+  "✅ Inscription enregistrée visuellement. La base de données sera ajoutée plus tard.";
+}
+</script>
 
 </body>
 </html>
